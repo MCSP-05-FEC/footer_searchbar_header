@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Dropdown} from 'react-bootstrap';
+import {Dropdown, btn} from 'react-bootstrap';
 
 
 export default class Header extends Component {
@@ -9,6 +9,7 @@ export default class Header extends Component {
             this.state = {
                 
                 inputValue: '',
+                isVisible: false
             } 
     }
 
@@ -30,7 +31,7 @@ export default class Header extends Component {
         return (
             <div id= 'header'>
                 <Dropdown>
-                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                        <Dropdown.Toggle variant="success" id="header-button">
                                 Categories
                         </Dropdown.Toggle>
 
@@ -38,10 +39,10 @@ export default class Header extends Component {
             
                                     <Dropdown.Item eventKey="1">Main Menu</Dropdown.Item>
                                     <Dropdown.Divider />
-                                <Dropdown.Item href="#/action-2">Grocery</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Household Essentials</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Halloween</Dropdown.Item>
-                                <Dropdown.Item href="#/action-4">Woman</Dropdown.Item>
+                                <Dropdown.Item href="#/action-5">Grocery</Dropdown.Item>
+                                <Dropdown.Item href="#/action-5">Household Essentials</Dropdown.Item>
+                                <Dropdown.Item href="#/action-5">Halloween</Dropdown.Item>
+                                <Dropdown.Item href="#/action-5">Woman</Dropdown.Item>
                                 <Dropdown.Item href="#/action-5">Men</Dropdown.Item>
                                 <Dropdown.Item href="#/action-5">Young Adult</Dropdown.Item>
                                 <Dropdown.Item href="#/action-5">Kids</Dropdown.Item>
@@ -69,9 +70,9 @@ export default class Header extends Component {
                                 <Dropdown.Item href="#/action-5">Clearance</Dropdown.Item>
                             </Dropdown.Menu>
                     </Dropdown>
-            <Dropdown>
+                <Dropdown>
 
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                <Dropdown.Toggle variant="success" id="header-button">
                     Deals
                 </Dropdown.Toggle>
 
@@ -86,7 +87,7 @@ export default class Header extends Component {
                 <Dropdown>
     
 
-                    <Dropdown.Toggle variant="success" id="dropdown-basic">
+                    <Dropdown.Toggle variant="success" id="header-button">
                         Whats New
                     </Dropdown.Toggle>
 
@@ -104,7 +105,7 @@ export default class Header extends Component {
                 </Dropdown>
                 <Dropdown>
 
-                     <Dropdown.Toggle variant="success" id="dropdown-basic">
+                     <Dropdown.Toggle variant="success" id="header-button">
                          Pickup & Delivery
                     </Dropdown.Toggle>
 
@@ -116,8 +117,8 @@ export default class Header extends Component {
                 </Dropdown>
                 <input type = 'text' className = 'searchbar' placeholder = 'Search' onChange = {(e) => { this.inputValue(e) }}></input>
                 <button id = 'button' onClick = {(e) => {this.enter(e.target.value)}}>Click</button>
-            <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                <Dropdown>
+                <Dropdown.Toggle variant="success" id="header-button">
                     Sign in
                 </Dropdown.Toggle>
 
