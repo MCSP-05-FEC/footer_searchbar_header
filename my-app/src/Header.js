@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Dropdown, btn} from 'react-bootstrap';
+import {Dropdown} from 'react-bootstrap';
 
 
 export default class Header extends Component {

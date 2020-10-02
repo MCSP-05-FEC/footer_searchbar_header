@@ -87,7 +87,7 @@ const Footer = (props) => {
                         <Dropdown.Divider />
                         <Dropdown.Item href='#/action-1'>Pinterest</Dropdown.Item>
                         <Dropdown.Divider />
-                        <Dropdown.Item href='#/action-1'>Faxebook</Dropdown.Item>
+                        <Dropdown.Item href='#/action-1'>Facebook</Dropdown.Item>
                         <Dropdown.Divider />
                         <Dropdown.Item href='#/action-1'>Instagram</Dropdown.Item>
                         <Dropdown.Divider />
@@ -139,8 +139,8 @@ const Footer = (props) => {
                         <Dropdown.Divider />
                     </Dropdown.Menu>
                 </Dropdown>
-            
             </div>
+            <hr/>
 
                 <div id = 'fcontainer'>
                     <b>The latest on our store health and saftey plans</b>
@@ -156,6 +156,7 @@ const Footer = (props) => {
                         <p href=''><b>Do Not Sell My Info - CA Resient Only</b></p>
                         <p href=''>& @ 2020 Target Brands, Inc.</p>
                     </div>
+            
             </div>
         )
     
