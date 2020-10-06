@@ -1,4 +1,7 @@
 #header {
+  display: flex;
+  align-items:center;
+  justify-content:center;
   padding: 20px;
   text-align: center;
   display:flex;
@@ -15,49 +18,81 @@
   border-color: transparent;
 }
 
-
-#fcontainer {
-  position: center;
-  /* right: 0px; */
-  width: 200px;
-  border: 3px solid white;
-  background-color: white;
-  /* padding: 10px; */
-  text-align: left;
-  
+.searchbar{
+  display: block;
+  width: 100%;
+  cursor: text;
+  outline: none;
+  resize: none;
+  position: relative;
+  padding: 7px 40px 7px 10px;
+  margin: 0px;
+  appearance: none;
+  border-radius: 0px;
+  border: 0px;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 1.35em;
+  box-sizing: border-box !important;
 }
 
+#button{
+  border-radius:8px;
+}
 
 #footer {
   background-color: grey;
-  padding-left: 34%;
-  /* text-align: center; */
-  /* align-content: 50%;   */
-  /* display:flex; */
   font-size: 10px;
   flex-direction: column;
   position: absolute; 
   bottom: 0px;
   width: 100%;
-  /* flex-grow: 1; */
+  display: flex;
+  align-items:center;
+  justify-content:center;
+
 }
 
-#footer-button{
-  color:black;
-  background-color: transparent;
-  border-color: transparent;
-  display: absolute;
+#fcontainer {
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  -webkit-box-align: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  padding: 0px 16px;
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 8px;
+  height: 64px;
+  max-height: 64px;
+  max-width: 200px;
+  overflow: auto;
+  margin: 12px 16px;
+  font-size: 14px;
 }
+
+
+  #footer-button{
+    color:black;
+    background-color: transparent;
+    border-color: transparent;
+    display: absolute;
+  }
 
 #footerList{
-display: flex;
-padding-top: 20px;
-padding-right:5%;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  
 }
 
 #container{
   display: flex;
-  vertical-align: middle;
-  padding-bottom: 20px;
-  padding-right: 40%;
+  align-items:center;
+  justify-content:center;
+}
+
+#line {
+  width: 100%;
 }

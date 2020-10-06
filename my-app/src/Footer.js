@@ -140,7 +140,7 @@ const Footer = (props) => {
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
-            <hr/>
+            <hr id = 'line'/>
 
                 <div id = 'fcontainer'>
                     <b>The latest on our store health and saftey plans</b>
