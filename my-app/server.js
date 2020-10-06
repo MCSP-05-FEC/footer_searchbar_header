@@ -5,9 +5,10 @@ const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
 
-const db = require('./migration.sql');
-app.use(bodyParser.urlencoded({extend:false}));
+// const db = require('./migration.sql');
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname,"./my-app/build" )));
 
 const { Pool } = require('pg');
 const { response } = require('express');
@@ -20,29 +21,29 @@ const pool = new Pool({
     port:process.env.DATA_PORT
 });
 
-app.use(express.static(path.join(__dirname,"./frontend/build" )));
 
 
-app.get('/names/:id', (req,res) => {
-
-    const id = Number(req.params.id);
-
-    pool.query('SELECT * FROM product_items WHERE id = $1', [id] ,(err,data) =>{
-        if(err) {
-            res.send(err);
+app.get('/names', (req,res) => {
+    
+    // const id = Number(req.params.id);
+    
+    pool.query('SELECT name FROM product_items1 ',(err,data) => {
+        if (err) {
+            // res.send(err);
+            console.log(err);
             console.log('naa bra');
         } else {
-            res.json(data.rows);
+            res.send(data.rows);
+            console.log(data.rows);
             console.log('we on');
         }
-    })
-
-
+    });
+    
+    
 });
 
 
 app.listen(3001,function() {
     console.log('Im listening');
 });
-
 module.exports= pool;
