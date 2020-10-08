@@ -1,5 +1,8 @@
 import React,{Component} from 'react';
 import {Dropdown} from 'react-bootstrap';
+import headerImage  from './headerImage.png';
+// import  borderImage from './borderImage.png';
+
 
 export default class Header extends Component {
     constructor(props) {
@@ -35,6 +38,9 @@ export default class Header extends Component {
     render (){
         return (
             <div id= 'header'>
+
+                <img src = {headerImage} id = 'headPic' alt = 'logo'></img>
+
                 <Dropdown>
                         <Dropdown.Toggle variant="success" id="header-button">
                                 Categories
@@ -42,8 +48,8 @@ export default class Header extends Component {
 
                             <Dropdown.Menu>
             
-                                    <Dropdown.Item eventKey="1">Main Menu</Dropdown.Item>
-                                    <Dropdown.Divider />
+                                <Dropdown.Item eventKey="1">Main Menu</Dropdown.Item>
+                                <Dropdown.Divider />
                                 <Dropdown.Item href="#/action-5">Grocery</Dropdown.Item>
                                 <Dropdown.Divider />
                                 <Dropdown.Item href="#/action-5">Household Essentials</Dropdown.Item>
