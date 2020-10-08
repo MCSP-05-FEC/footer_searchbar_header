@@ -8,8 +8,14 @@ const path = require('path');
 // const db = require('./migration.sql');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname,"./my-app/build" )));
+app.use(express.static(path.join(__dirname,"./my-app/dist" )));
 
+
+
+app.get('/headerFooter', (req, res) => {   
+    res.sendFile(path.join(`${dirname}/dist/bundle.js`)) });
+    
+    
 const { Pool } = require('pg');
 const { response } = require('express');
 
@@ -46,4 +52,5 @@ app.get('/names', (req,res) => {
 app.listen(3001,function() {
     console.log('Im listening');
 });
+
 module.exports= pool;
