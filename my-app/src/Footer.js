@@ -1,6 +1,6 @@
 import React from 'react';
 import {Dropdown} from 'react-bootstrap';
-import footerImage from './footerImage.png';
+
 
 const Footer = (props) => {
     
@@ -157,7 +157,7 @@ const Footer = (props) => {
                         <p href=''>& @ 2020 Target Brands, Inc.</p>
                     </div>
             
-            <img src ={ footerImage } id = 'lastImg' alt='logo1'></img>
+            <img src ={"https://www.visitdevonport.com.au/wp-content/uploads/2019/07/Target.png"} id = 'lastImg' alt='logo1'></img>
             </div>
         )
     

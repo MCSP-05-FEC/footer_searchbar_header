@@ -3,8 +3,9 @@ DROP DATABASE IF EXISTS target_dbs;
 CREATE DATABASE target_dbs;
 
 
+\c target_dbs;
 
-DROP TABLE product_items1;
+
 
 
 CREATE TABLE product_items1(id serial, name text,list int);
@@ -20,4 +21,3 @@ INSERT INTO product_items1 (name,list) VALUES ('Luffy Zippo Lighter',17);
 INSERT INTO product_items1 (name,list) VALUES ('Wooden Apple Keyboard',18);
 INSERT INTO product_items1 (name,list) VALUES ('AA Energizer Batteries',19);
 
-\c target_dbs;

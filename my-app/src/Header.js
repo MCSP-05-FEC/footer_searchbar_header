@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import {Dropdown} from 'react-bootstrap';
-import headerImage  from './headerImage.png';
-// import  borderImage from './borderImage.png';
+
 
 
 export default class Header extends Component {
@@ -22,11 +21,13 @@ export default class Header extends Component {
     enter(e) {
         console.log(this.state.inputValue);
         
-        fetch('/names/')
+        fetch('/names/'+this.state.inputValue)
         .then(res => {return res.json()})
         .then(data => {
-            console.log(data);
-        });
+            console.log(data[0].list);
+            // return data;
+        })
+
     }
 
 
@@ -39,7 +40,7 @@ export default class Header extends Component {
         return (
             <div id= 'header'>
 
-                <img src = {headerImage} id = 'headPic' alt = 'logo'></img>
+                <img src = {"https://www.visitdevonport.com.au/wp-content/uploads/2019/07/Target.png"} id = 'headPic' alt = 'logo'></img>
 
                 <Dropdown>
                         <Dropdown.Toggle variant="success" id="header-button">
@@ -168,7 +169,7 @@ export default class Header extends Component {
                                 <Dropdown.Item href="#/action-3">Drive Up</Dropdown.Item>
                             </Dropdown.Menu>
                 </Dropdown>
-                <input type = 'text' className = 'searchbar' placeholder = 'Search' onChange = {(e) => { this.inputValue(e) }}></input>
+                <input id='searchbar' type = 'text' className = 'searchbar' placeholder = 'Search' onChange = {(e) => { this.inputValue(e) }}></input>
                 <button id = 'button' onClick = {(e) => {this.enter(e.target.value)}}>Click</button>
                 <Dropdown>
                 <Dropdown.Toggle variant="success" id="header-button">
